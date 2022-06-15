@@ -70,7 +70,7 @@ int main (int argc, char **argv) {
 
   if (argc == 2) {
     //ofstream var (so we can open file)
-    std::ifstream ahrinFile;
+    std::ifstream mockFile;
 
     std::string currLine; //temporaily holds the current line
     std::vector<std::string> allLines; //container to hold each string/line
@@ -119,13 +119,13 @@ int main (int argc, char **argv) {
     std::string filename = argv[1];
 
     //opens file
-    ahrinFile.open(filename);
+    mockFile.open(filename);
 
-    if (ahrinFile.is_open()) {
+    if (mockFile.is_open()) {
       //do actual work on file here
 
       //pushes each line into vector of strings
-      while (getline(ahrinFile, currLine)) {
+      while (getline(mockFile, currLine)) {
         allLines.push_back(currLine);
       }
 
@@ -1666,7 +1666,7 @@ int main (int argc, char **argv) {
       exit(0);
     }
     //close file
-    ahrinFile.close();
+    mockFile.close();
   } else {   //input validation (wrong number of command line args)
     std::cerr << "Wrong number of arguments.\n";
     exit(0);
@@ -1684,7 +1684,7 @@ int main (int argc, char **argv) {
   //standard error, and your program must exit with exit code 1.
 
   //you could check if
-  //a line in an Ahrin assembly language program contains a label simply by checking if the first character is not a whitespace.
+  //a line in the mock assembly language program contains a label simply by checking if the first character is not a whitespace.
 
   //signed integers are represented in two's complement
 
