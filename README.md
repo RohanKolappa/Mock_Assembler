@@ -1,2 +1,2 @@
 # Mock_Assembler
-Converts Ahrin ISA's assembly code into machine code
+Converts a mock ISA's assembly code into machine code
